@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ------------------ header start ------------------ -->
+    <header>
+      <div class="container">
+        <!-- For Desktop Screens -->
+        <div
+          class="d-lg-flex d-none justify-content-between align-items-center h-72px"
+        >
+          <!-- logo and nav links -->
+          <div class="d-flex align-items-center gap-10">
+            <img
+              src="/assets/icons/logo.jpg"
+              width="137"
+              height="43"
+              alt="RSPS Logo"
+              class="cursor-pointer"
+            />
+            <ul class="d-flex list-unstyled">
+              <li class="links"><a href="#">RSPS List</a></li>
+              <li class="links"><a href="#">Blogs</a></li>
+              <li class="links"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- log in and sign up buttons -->
+          <div class="d-flex gap-3 align-items-center">
+            <button class="white-button">Log In</button>
+            <button class="blue-button">Sign Up</button>
+          </div>
+        </div>
+
+        <!-- For smaller screens -->
+        <div
+          class="d-flex d-lg-none justify-content-between align-items-center h-72px"
+        >
+          <!-- Hamburger / X Toggle -->
+          <button
+            id="mobileToggle"
+            class="hamburger d-flex flex-column justify-content-center"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Logo -->
+          <div>
+            <img
+              src="/assets/icons/logo.jpg"
+              width="100"
+              height="30"
+              alt="RSPS Logo"
+            />
+          </div>
+        </div>
+
+        <!-- Sliding Menu -->
+        <div
+          id="mobileMenu"
+          class="mobile-menu shadow d-flex align-items-start flex-column"
+        >
+          <ul class="nav-list">
+            <li><a href="#">RSPS List</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="d-flex gap-2 flex-column mt-4">
+            <button class="white-button w-100">Log In</button>
+            <button class="blue-button w-100">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ------------------ header end ------------------ -->
+
+    <!-- ------------------ main start ------------------ -->
+    <main>
+      <!-- Hero Section -->
+      <section>
+        <div class="bg-hero d-flex justify-content-center align-items-center">
+          <div class="container">
+            <div
+              class="d-flex gap-4 flex-md-row flex-column justify-content-between text-center align-items-center text-white"
+            >
+              <div class="text-md-start text-center d-flex flex-column gap-2">
+                <h2 class="neon-text fs-60">RuneScape Private Servers</h2>
+                <p class="fs-13 w-489">
+                  Looking for the best RuneScape private servers? We’ve got a
+                  list of the top RSPS, with real rankings and no bot-voting.
+                  Whether you want a classic or custom experience, find your
+                  next server here!
+                </p>
+              </div>
+
+              <div class="dropdown-container d-flex flex-column gap-1">
+                <h3 class="neon-text fs-32">Filter the list</h3>
+
+                <div class="dropdown">
+                  <button
+                    class="bg-white dropdown-btn fw-bold w-100 text-start p-2 px-3 rounded-md d-flex justify-content-between align-items-center"
+                    type="button"
+                    id="optionsDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    All
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#0065ff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="optionsDropdown">
+                    <li><a href="#" class="dropdown-item">All</a></li>
+                    <li><a href="#" class="dropdown-item">Custom</a></li>
+                    <li><a href="#" class="dropdown-item">PvM</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- List Section -->
+      <section class="pt-md-5 pt-3">
+        <div class="container">
+          <div class="list-container"></div>
+
+          <!-- Pagination -->
+          <nav class="my-5 d-flex justify-content-center align-items-center">
+            <ul
+              class="pagination d-flex gap-2 align-items-center"
+              id="pagination"
+            ></ul>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Main End -->
+    </main>
+
+    <footer>
+      <div
+        class="bg-footer d-flex align-items-center justify-content-center py-4"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex gap-10 flex-lg-row flex-column">
+                <!-- Logo block -->
+                <div
+                  class="footer-top d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start mb-4"
+                >
+                  <img
+                    src="/assets/icons/logo.jpg"
+                    width="137"
+                    height="43"
+                    alt="RSPS Logo"
+                    class="cursor-pointer"
+                  />
+                  <p class="mb-0 mt-2">Copyright ©RSPSLIST</p>
+                </div>
+
+                <!-- Footer content blocks -->
+                <div
+                  class="footer-columns d-flex flex-column flex-md-row gap-10 align-items-center align-items-lg-start text-center text-md-start"
+                >
+                  <!-- Links -->
+                  <div class="d-flex flex-column gap-3 pe-md-3">
+                    <!-- links here -->
+                    <h4 class="color-primaryBlue fw-medium">Links</h4>
+
+                    <ul>
+                      <li><a class="fs-15" href="#">Home</a></li>
+                      <li><a class="fs-15" href="#">RSPS List</a></li>
+                      <li><a class="fs-15" href="#">New Servers</a></li>
+                      <li><a class="fs-15" href="#">Anti-VPN</a></li>
+                      <li><a class="fs-15" href="#">Contact</a></li>
+                      <li><a class="fs-15" href="#">Callback</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Recent posts -->
+                  <div class="d-flex flex-column align-items-center gap-4">
+                    <!-- posts here -->
+                    <h4 class="color-primaryBlue fw-medium">Recent posts</h4>
+
+                    <div class="d-flex flex-column gap-3">
+                      <div class="d-flex gap-2 align-items-center">
+                        <img
+                          src="/assets/cards/home-1.jpg"
+                          alt="blog-1"
+                          width="98"
+                          height="57"
+                        />
+                        <div class="d-flex flex-column gap-1">
+                          <h6 class="fw-bold">Blog Title</h6>
+                          <p>September 2024</p>
+                        </div>
+                      </div>
+                      <div class="d-flex gap-2 align-items-center">
+                        <img
+                          src="/assets/cards/home-1.jpg"
+                          alt="blog-1"
+                          width="98"
+                          height="57"
+                        />
+                        <div class="d-flex flex-column gap-1">
+                          <h6 class="fw-bold">Blog Title</h6>
+                          <p>September 2024</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Popular posts -->
+                  <div class="d-flex flex-column gap-4 align-items-center">
+                    <!-- posts here -->
+                    <h4 class="color-primaryBlue fw-medium">Popular posts</h4>
+
+                    <div class="d-flex flex-column gap-3">
+                      <div class="d-flex gap-2 align-items-center">
+                        <img
+                          src="/assets/cards/home-1.jpg"
+                          alt="blog-1"
+                          width="98"
+                          height="57"
+                        />
+                        <div class="d-flex flex-column gap-1">
+                          <h6 class="fw-bold">Blog Title</h6>
+                          <p>September 2024</p>
+                        </div>
+                      </div>
+                      <div class="d-flex gap-2 align-items-center">
+                        <img
+                          src="/assets/cards/home-1.jpg"
+                          alt="blog-1"
+                          width="98"
+                          height="57"
+                        />
+                        <div class="d-flex flex-column gap-1">
+                          <h6 class="fw-bold">Blog Title</h6>
+                          <p>September 2024</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div
+        class="bg-footerBottom d-flex justify-content-center align-items-center"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna
+        </p>
+      </div>
+    </footer>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Script -->
+    <script src="./assets/js/main.js"></script>
+    <!-- RSPS List Script -->
+    <script src="./assets/js/RSPSList.js"></script>
+  </body>
+</html>
