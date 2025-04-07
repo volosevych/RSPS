@@ -1,5 +1,6 @@
 const blogPosts = [
   {
+    slug: "fantasy-realm",
     tag: "BLOG",
     title: "RSPSList Blog Post 1",
     description:
@@ -10,6 +11,7 @@ const blogPosts = [
     icon: "/assets/icons/R.png",
   },
   {
+    slug: "fantasy-realm-2",
     tag: "BLOG",
     title: "RSPSList Blog Post 2",
     description:
@@ -20,6 +22,7 @@ const blogPosts = [
     icon: "/assets/icons/R.png",
   },
   {
+    slug: "fantasy-realm-3",
     tag: "BLOG",
     title: "RSPSList Blog Post 3",
     description:
@@ -33,6 +36,7 @@ const blogPosts = [
 
 function createBlogPostHTML(post) {
   return `
+  <a href="blog-post.html?slug=${post.slug}" class="blog-link">
     <div class="d-flex gap-10 flex-lg-row flex-column justify-content-center align-items-center text-lg-start text-center">
             <div class="text-center">
               <img src="${post.image}" alt="${post.title}" width="610" height="301" class="img-fluid mb-3" />
@@ -40,7 +44,7 @@ function createBlogPostHTML(post) {
 
             <div class="d-flex flex-column gap-3 align-items-lg-start align-items-center">
             <span class="fs-18">${post.tag}</span>
-            <h2 class="fs-32 fw-bold">${post.title}</h2>
+            <h2 class="fs-32 fw-bold blog-title">${post.title}</h2>
             <p class="fs-13 w-md-50 w-lg-75 w-100 color-deepsea">
             ${post.description}
             </p>
@@ -54,12 +58,29 @@ function createBlogPostHTML(post) {
             </div>
         </div>
     </div>
+  </a>
     `;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const blogContainer = document.getElementById("blogPostsContainer");
-  blogPosts.forEach((post) => {
-    blogContainer.innerHTML += createBlogPostHTML(post);
-  });
+  if (blogContainer) {
+    blogPosts.forEach((post) => {
+      blogContainer.innerHTML += createBlogPostHTML(post);
+    });
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get("slug");
+
+  if (window.location.pathname.includes("blog-post.html") && slug) {
+    const post = blogPosts.find((p) => p.slug === slug);
+    console.log("Post found:", post);
+
+    if (post) {
+      const titleEl = document.getElementById("blogTitle");
+
+      if (titleEl) titleEl.textContent = post.title;
+    }
+  }
 });
