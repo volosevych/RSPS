@@ -245,50 +245,65 @@ function createBoxHTML({
 
 // Render pagination controls
 function renderPagination(totalItems) {
-  if (!pagination) return;
-
   const pageCount = Math.ceil(totalItems / itemsPerPage);
   pagination.innerHTML = "";
 
-  // Add previous button
-  // if (pageCount > 1) {
-  //   const prevLi = document.createElement("li");
-  //   prevLi.className = `page-item ${currentPage === 1 ? "disabled" : ""}`;
-  //   prevLi.innerHTML = `<button class="page-link">&laquo;</button>`;
-  //   if (currentPage > 1) {
-  //     prevLi.addEventListener("click", () => {
-  //       currentPage--;
-  //       renderItems();
-  //     });
-  //   }
-  //   pagination.appendChild(prevLi);
-  // }
-
-  // Add page numbers
-  for (let i = 1; i <= pageCount; i++) {
+  const createButton = (label, page, isActive = false, disabled = false) => {
     const li = document.createElement("li");
-    li.className = `page-number ${i === currentPage ? "active" : ""}`;
-    li.innerHTML = `<button class="page-number">${i}</button>`;
-    li.addEventListener("click", () => {
-      currentPage = i;
-      renderItems();
-    });
-    pagination.appendChild(li);
-  }
-
-  // Add next button
-  if (pageCount > 1) {
-    const nextLi = document.createElement("li");
-    nextLi.className = `page-next ${
-      currentPage === pageCount ? "disabled" : ""
+    li.className = `page-number ${isActive ? "active" : ""} ${
+      disabled ? "disabled" : ""
     }`;
-    nextLi.innerHTML = `<button class="page-next">Next</button>`;
-    if (currentPage < pageCount) {
-      nextLi.addEventListener("click", () => {
-        currentPage++;
+    li.innerHTML = `<button class="page-link" ${
+      disabled ? "disabled" : ""
+    }>${label}</button>`;
+
+    if (!disabled && page != currentPage) {
+      li.addEventListener("click", () => {
+        currentPage = page;
         renderItems();
       });
     }
-    pagination.appendChild(nextLi);
+    return li;
+  };
+
+  const addEllipsis = () => {
+    const li = document.createElement("li");
+    li.className = "page-ellipsis";
+    li.innerHTML = `<span class="page-link disabled">...</span>`;
+    return li;
+  };
+
+  const pages = [];
+
+  if (pageCount <= 5) {
+    for (let i = 1; i <= pageCount; i++) pages.push(i);
+  } else {
+    pages.push(1);
+
+    if (currentPage > 3) pages.push("...");
+
+    const start = Math.max(2, currentPage - 1);
+    const end = Math.min(pageCount - 1, currentPage + 1);
+
+    for (let i = start; i <= end; i++) pages.push(i);
+
+    pages.push(pageCount);
   }
+
+  pages.forEach((p) => {
+    if (p === "...") {
+      pagination.appendChild(addEllipsis());
+    } else {
+      pagination.appendChild(createButton(p, p, p === currentPage));
+    }
+  });
+
+  const nextBtn = createButton(
+    "Next",
+    currentPage + 1,
+    false,
+    currentPage === pageCount
+  );
+  nextBtn.classList.add("page-next");
+  pagination.appendChild(nextBtn);
 }
