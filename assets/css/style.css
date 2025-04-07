@@ -1,0 +1,390 @@
+:root {
+  --primary-blue: #0065ff;
+  --dark-blue: #001842;
+  --darker-blue: #00255e;
+  --light-blue: #9cc0ff;
+  --frosty: #3ad4ff;
+  --white: #fff;
+  --black: #000000;
+  --gray: #8a8a8a;
+  --light-gray: #d9d9d9;
+
+  --blue-gradient: linear-gradient(to top, #ebf7ff 25%, #bedcff 100%);
+  --blue-gradient-2: linear-gradient(to bottom, #ebf7ff 25%, #bedcff 100%);
+
+  /* Font */
+  --font-base: clamp(12px, 5vw, 16px);
+  --font-h2: clamp(28px, 5vw, 36px);
+  --font-hero: clamp(42px, 5vw, 60px);
+
+  /* Font Family */
+  --font-leagueSpartan: "League Spartan", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1438px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  outline: inherit;
+  border: inherit;
+  background-color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.fs-11 {
+  font-size: 11px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-19 {
+  font-size: 19px;
+}
+
+.fs-25 {
+  font-size: 25px;
+}
+
+.fs-28 {
+  font-size: 28px;
+}
+
+.fs-32 {
+  font-size: var(--font-h2);
+}
+
+.fs-60 {
+  font-size: var(--font-hero);
+}
+
+.h-72px {
+  height: 72px;
+}
+
+.gap-10 {
+  gap: 80px;
+}
+
+.w-77 {
+  width: 100%;
+  max-width: 77px;
+}
+
+.w-489 {
+  width: 100%;
+  max-width: 489px;
+}
+
+.w-441 {
+  width: 100%;
+  max-width: 441px;
+}
+.rounded-md {
+  border-radius: 10px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-3xl {
+  font-size: var(--font-h2);
+}
+
+.color-darkBlue {
+  color: var(--darker-blue);
+}
+
+.color-primaryBlue {
+  color: var(--primary-blue);
+}
+
+.links {
+  color: var(--black);
+  font-weight: medium;
+
+  transition: all 0.3s ease-in-out;
+  border: 3px solid transparent;
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.links:hover {
+  color: var(--primary-blue);
+}
+
+.links:hover::after {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  border-top: 3px solid var(--primary-blue);
+  background-image: var(--blue-gradient);
+  z-index: -1;
+  color: var(--primary-blue);
+}
+
+.blue-button {
+  border: 1px solid transparent;
+  background-color: var(--primary-blue);
+  padding: 8px 25px;
+  font-weight: medium;
+  color: var(--white);
+  border-radius: 6px;
+
+  transition: all 0.3s ease;
+}
+
+.blue-button:hover {
+  background-color: var(--darker-blue);
+}
+
+.white-button {
+  border: 1px solid var(--primary-blue);
+  padding: 8px 30px;
+  font-weight: medium;
+  border-radius: 6px;
+  color: var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.white-button:hover {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  z-index: 9999;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+  transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100vh;
+  background: white;
+  padding: 2rem 1.5rem;
+  transition: left 0.3s ease;
+  z-index: 1050;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+#menuClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Nav links */
+.nav-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+
+.bg-hero {
+  background-image: url("../background-images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 488px;
+}
+
+.bg-footer {
+  background-image: url(../background-images/footer.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 514px;
+}
+
+.neon-text {
+  color: var(--white);
+  text-shadow: 0 0 5px var(--primary-blue), 0 0 10px var(--frosty),
+    0 0 20px var(--frosty), 0 0 40px var(--darker-blue),
+    0 0 80px var(--darker-blue);
+  font-weight: bold;
+  font-family: var(--font-leagueSpartan);
+  white-space: nowrap;
+}
+
+.dropdown-container {
+  width: 100%;
+  max-width: 317px;
+}
+
+.dropdown-btn {
+  outline: var(--primary-blue);
+  border: 2px solid transparent;
+  color: var(--primary-blue);
+}
+
+.dropdown-menu {
+  border: 2px solid var(--primary-blue);
+}
+
+.dropdown-menu li a {
+  color: var(--darker-blue);
+}
+
+.list-container .row {
+  background-image: var(--blue-gradient-2);
+  padding: 15px 50px;
+}
+
+.blue-tag {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 5px 20px;
+  border-radius: 15px;
+}
+
+.page-number button {
+  color: var(--darker-blue);
+  font-size: 25px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.page-number button:hover {
+  color: var(--primary-blue);
+}
+
+.page-number.active button {
+  color: var(--primary-blue);
+}
+
+.page-next button {
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.bg-footerBottom {
+  background-color: var(--dark-blue);
+  padding: 8px 10px;
+  color: var(--light-blue);
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.footer-top img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .width-100 {
+    width: 100% !important;
+  }
+
+  .footer-columns > div {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .bg-footer {
+    background-image: url(../background-images/footer.jpg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    min-height: 600px;
+  }
+  .gap-10 {
+    gap: 30px;
+  }
+}
