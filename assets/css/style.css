@@ -204,6 +204,10 @@ p {
   background-color: var(--primary-blue);
 }
 
+.color-lightBlue {
+  color: var(--light-blue);
+}
+
 .color-deepsea {
   color: var(--dark-blue);
 }
@@ -214,6 +218,14 @@ p {
 
 .color-gray {
   color: var(--gray);
+}
+
+.bg-gradient {
+  background-image: linear-gradient(
+    to bottom,
+    #ebf7ff 70%,
+    #bedcff 100%
+  ) !important;
 }
 
 .links {
@@ -271,6 +283,11 @@ p {
   border-radius: 6px;
 
   transition: all 0.3s ease;
+}
+
+.blue-button.modified {
+  border-radius: 3px;
+  padding: 8px 28px;
 }
 
 .blue-button:hover {
@@ -466,6 +483,27 @@ p {
 
 .blog-link:hover {
   transform: translateY(-5px);
+}
+
+.form-box {
+  background-image: linear-gradient(to bottom, #ebf7ff 10%, #bedcff 100%);
+  height: 271px;
+}
+
+.form-control {
+  background-color: rgba(0, 101, 255, 0.2);
+}
+
+.input-toggle-icon {
+  top: 71%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-check-input {
+  background-color: rgba(0, 101, 255, 0.01);
+  border: 1px solid var(--black);
 }
 
 @media (max-width: 1025px) {
