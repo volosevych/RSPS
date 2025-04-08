@@ -4,6 +4,7 @@
   --darker-blue: #00255e;
   --light-blue: #9cc0ff;
   --frosty: #3ad4ff;
+  --blue: #0093ef;
   --white: #fff;
   --black: #000000;
   --gray: #8a8a8a;
@@ -21,6 +22,7 @@
 
   /* Font Family */
   --font-leagueSpartan: "League Spartan", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
 html,
@@ -60,10 +62,10 @@ button {
   border-radius: 16px !important;
 }
 
-ul {
-  list-style: none;
+ul.ul-inherit {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 h1,
@@ -73,6 +75,10 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+.font-roboto {
+  font-family: var(--font-roboto);
 }
 
 p {
@@ -108,11 +114,19 @@ p {
 }
 
 .fs-28 {
-  font-size: 28px;
+  font-size: clamp(20px, 5vw, 28px);
 }
 
 .fs-32 {
   font-size: var(--font-h2);
+}
+
+.fs-40 {
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+.fs-48 {
+  font-size: 48px;
 }
 
 .fs-60 {
@@ -139,6 +153,10 @@ p {
   gap: 100px;
 }
 
+.pt-10 {
+  padding-top: 5rem;
+}
+
 .w-77 {
   width: 100%;
   max-width: 77px;
@@ -152,6 +170,11 @@ p {
 .w-441 {
   width: 100%;
   max-width: 441px;
+}
+
+.w-942 {
+  width: 100%;
+  max-width: 942px;
 }
 
 .p-right {
@@ -177,8 +200,20 @@ p {
   color: var(--primary-blue);
 }
 
+.bg-primaryBlue {
+  background-color: var(--primary-blue);
+}
+
 .color-deepsea {
   color: var(--dark-blue);
+}
+
+.color-blue {
+  color: var(--blue);
+}
+
+.color-gray {
+  color: var(--gray);
 }
 
 .links {
@@ -429,13 +464,6 @@ p {
   transition: transform 0.3s ease;
 }
 
-/* .blog-link:hover h2 {
-  color: var(--dark-blue);
-  text-shadow: 0 0 5px var(--primary-blue), 0 0 10px var(--frosty),
-    0 0 20px var(--frosty), 0 0 40px var(--darker-blue),
-    0 0 80px var(--darker-blue);
-} */
-
 .blog-link:hover {
   transform: translateY(-5px);
 }
@@ -470,6 +498,10 @@ p {
 
   .margin-auto {
     margin: 0 auto;
+  }
+
+  .pt-10 {
+    padding-top: 1rem;
   }
 }
 

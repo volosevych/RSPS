@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,400;0,500;0,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -39,7 +39,7 @@
               alt="RSPS Logo"
               class="cursor-pointer"
             />
-            <ul class="d-flex list-unstyled">
+            <ul class="d-flex ul-inherit align-items-center">
               <li class="links"><a href="/index.html">RSPS List</a></li>
               <li class="links"><a href="./blog.html">Blogs</a></li>
               <li class="links"><a href="./contact.html">Contact</a></li>
@@ -107,7 +107,7 @@
             >
               <h2 class="neon-text font-large" id="blogTitle"></h2>
 
-              <div class="text-white d-flex w-10 gap-5 fs-19">
+              <div class="text-white d-flex w-10 gap-lg-5 gap-3 fs-19">
                 <p>01/04/25</p>
                 <div>|</div>
                 <p>4 min to read</p>
@@ -115,6 +115,80 @@
                 <p>views: 879</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Content -->
+      <section class="rounded-section font-roboto">
+        <div class="container">
+          <div class="d-flex flex-column-reverse flex-lg-row gap-5">
+            <div
+              class="d-flex flex-column gap-4 pt-10 w-942"
+              id="blogContent"
+            ></div>
+            <aside
+              class="d-flex flex-column gap-4 align-items-lg-end align-items-center pt-4"
+            >
+              <!-- Rating -->
+              <div class="d-flex align-items-center gap-3">
+                <p class="fs-28 fw-medium color-gray mb-0 text-nowrap">
+                  Average Rating
+                </p>
+                <div class="d-flex gap-1">
+                  <img
+                    src="/assets/icons/star.svg"
+                    width="28"
+                    height="28"
+                    alt="rating"
+                  />
+                  <img
+                    src="/assets/icons/star.svg"
+                    width="28"
+                    height="28"
+                    alt="rating"
+                  />
+                  <img
+                    src="/assets/icons/star.svg"
+                    width="28"
+                    height="28"
+                    alt="rating"
+                  />
+                  <img
+                    src="/assets/icons/star.svg"
+                    width="28"
+                    height="28"
+                    alt="rating"
+                  />
+                  <img
+                    src="/assets/icons/star.svg"
+                    width="28"
+                    height="28"
+                    alt="rating"
+                  />
+                </div>
+              </div>
+
+              <!-- Blue Box -->
+              <div
+                class="d-flex justify-content-lg-end justify-content-center pt-3"
+              >
+                <div
+                  class="bg-primaryBlue p-3 rounded text-white w-75"
+                  id="quickLinksBox"
+                >
+                  <!-- <p>What are the OSRS Fire Giants?</p>
+                  <p>Requirements</p>
+                  <p>Where To Find Fire Giants In OSRS</p>
+                  <p>Fire Giant OSRS Strategy Guide</p>
+                  <p>Choosing Combat Style</p>
+                  <p>Combat Stats</p>
+                  <p>Recommendable Gears</p>
+                  <p>Fire Giant Table</p>
+                  <p>Fight and defeat the Fire Giants with our guide</p> -->
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
@@ -153,7 +227,7 @@
                     <!-- links here -->
                     <h4 class="color-primaryBlue fw-medium">Links</h4>
 
-                    <ul>
+                    <ul class="ul-inherit">
                       <li><a class="fs-15" href="#">Home</a></li>
                       <li><a class="fs-15" href="#">RSPS List</a></li>
                       <li><a class="fs-15" href="#">New Servers</a></li>
