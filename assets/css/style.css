@@ -369,7 +369,7 @@ p {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 50%;
+  width: auto;
   height: auto;
   background: white;
   padding: 2rem 1.5rem;

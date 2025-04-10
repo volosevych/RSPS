@@ -29,3 +29,58 @@ links.forEach((link) => {
     link.parentElement.classList.add("active-link");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const authButtons = document.getElementById("authButtons");
+  const mobileAuthButtons = document.getElementById("mobileAuthButtons");
+  const user = localStorage.getItem("loggedInUser");
+
+  const isHomePage =
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname === "/";
+  const prefix = isHomePage ? "pages/" : "./";
+
+  // Function to render auth buttons
+  const renderAuthButtons = (container, isMobile = false) => {
+    if (!container) return;
+
+    if (user) {
+      container.innerHTML = `
+        <div class="d-flex ${
+          isMobile
+            ? "flex-column align-items-start gap-3"
+            : "gap-3 align-items-center"
+        }">
+          <p class="fw-bold color-darkBlue ${
+            isMobile
+              ? "text-start d-flex flex-column"
+              : "d-flex align-items-center gap-2"
+          }">
+            <span>Logged in as:</span>
+             <span class="color-blue">${user}</span>
+          </p>
+          <button class="white-button ${
+            isMobile ? "w-auto" : ""
+          }" onClick="logout()">Log Out</button>
+        </div>
+      `;
+    } else {
+      container.innerHTML = `
+        <button class="white-button ${isMobile ? "w-100" : ""}">
+          <a href="${prefix}logIn.html">Log In</a>
+        </button>
+        <button class="blue-button ${isMobile ? "w-100" : ""}">
+          <a href="${prefix}signUp.html">Sign Up</a>
+        </button>
+      `;
+    }
+  };
+
+  renderAuthButtons(authButtons);
+  renderAuthButtons(mobileAuthButtons, true);
+});
+
+function logout() {
+  localStorage.removeItem("loggedInUser");
+  location.reload();
+}

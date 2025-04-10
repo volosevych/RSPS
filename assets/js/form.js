@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const togglePassword = document.getElementById("togglePassword");
   const forgotForm = document.getElementById("forgotForm");
   const resetForm = document.getElementById("resetForm");
+  const loginForm = document.getElementById("loginForm");
+  const registerForm = document.getElementById("registerForm");
 
   // Show/hide password (only if elements exist)
   if (passwordInput && togglePassword) {
@@ -63,6 +65,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
       showAlert("Your password has been successfully reset!", "success");
       resetForm.reset();
+    });
+  }
+
+  // Simulated Log In
+  if (loginForm) {
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+      const email = emailInput?.value.trim();
+      const password = passwordInput?.value.trim();
+
+      if (!email || !password) {
+        showAlert("Please fill in all fields.", "warning");
+        return;
+      }
+
+      localStorage.setItem("loggedInUser", email);
+      showAlert("Logged in successfully!", "success");
+
+      setTimeout(() => {
+        window.location.href = "../index.html";
+      }, 300);
+    });
+  }
+
+  // Simulated Register
+  if (registerForm) {
+    registerForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+      const confirmPasswordInput = document.getElementById("confirmPassword");
+
+      const email = emailInput?.value.trim();
+      const password = passwordInput?.value.trim();
+      const confirmPassword = confirmPasswordInput?.value.trim();
+
+      if (!email || !password || !confirmPassword) {
+        showAlert("Passwords do not match!", "danger");
+        return;
+      }
+
+      // Simulate saving and login
+      localStorage.setItem("loggedInUser", email);
+      showAlert("Register successfully! Logging you in...", "success");
+
+      setTimeout(() => {
+        window.location.href = "../index.html";
+      }, 300);
     });
   }
 });
