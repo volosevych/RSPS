@@ -477,11 +477,16 @@ p {
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease;
+  will-change: opacity;
 }
 
 #page-loader.fade-out {
   opacity: 0;
   pointer-events: none;
+}
+
+#page-loader.hidden {
+  display: none !important;
 }
 
 #page-loader .spinner {
@@ -506,6 +511,7 @@ p {
 .alert-info {
   background-color: var(--dark-blue);
   color: var(--white);
+  border: 1px solid var(--dark-blue);
 }
 
 .blue-tag {

@@ -1,8 +1,11 @@
+// ==========================
 // RSPS List Data
-// Here you can change all the text content
+// ==========================
+// This array holds all RSPS server listings.
+// Each item contains the category, title, description, vote count, tags, and image path.
 const allItems = [
   {
-    // Category for filter
+    // Category used for filtering (e.g., "Custom", "PvM", etc.)
     category: "Custom",
     title: "Fantasy - #1 Custom ",
     description:
@@ -285,15 +288,12 @@ const allItems = [
   // Add more items to test pagination...
 ];
 
-// Configuration
 const itemsPerPage = 9;
 let currentPage = 1;
 let currentFilter = "All";
 
-// DOM Elements
 let container, pagination, dropdownItems;
 
-// Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
   container = document.querySelector(".list-container");
   pagination = document.getElementById("pagination");
@@ -304,34 +304,20 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", function (e) {
       e.preventDefault();
       currentFilter = this.textContent;
-      currentPage = 1; // Reset to first page when filter changes
+      currentPage = 1;
 
-      // Update dropdown button text
       const dropdownToggle = document.getElementById("optionsDropdown");
       if (dropdownToggle) {
-        // Keep only the text node and remove other children
-        while (dropdownToggle.firstChild) {
-          dropdownToggle.removeChild(dropdownToggle.firstChild);
-        }
-
-        // Add new text node
-        dropdownToggle.appendChild(
-          document.createTextNode(currentFilter + " ")
-        );
-
-        // Add back the SVG icon
-        dropdownToggle.innerHTML += `
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0065ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
-              <path d="m6 9 6 6 6-6"></path>
-            </svg>
-          `;
+        dropdownToggle.innerHTML = `${currentFilter} 
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0065ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>`;
       }
 
       renderItems();
     });
   });
 
-  // Initial render
   renderItems();
 });
 
@@ -371,7 +357,9 @@ function renderItems() {
   renderPagination(filtered.length);
 }
 
-// Create HTML for a single item
+// ==========================
+// Generate HTML for Each RSPS Box
+// ==========================
 function createBoxHTML({
   category,
   title,
@@ -426,7 +414,9 @@ function createBoxHTML({
     `;
 }
 
-// Render pagination controls
+// ==========================
+// Render Pagination Controls
+// ==========================
 function renderPagination(totalItems) {
   const pageCount = Math.ceil(totalItems / itemsPerPage);
   pagination.innerHTML = "";
@@ -440,19 +430,13 @@ function renderPagination(totalItems) {
       disabled ? "disabled" : ""
     }>${label}</button>`;
 
-    // if (!disabled && page != currentPage) {
-    //   li.addEventListener("click", () => {
-    //     currentPage = page;
-    //     renderItems();
-    //   });
-    // }
-
-    if (!disabled && page !== currentPage && typeof page === "number") {
+    if (!disabled && typeof page === "number" && page !== currentPage) {
       li.addEventListener("click", () => {
         currentPage = page;
         renderItems();
       });
     }
+
     return li;
   };
 
@@ -463,36 +447,25 @@ function renderPagination(totalItems) {
     return li;
   };
 
-  const pages = [];
+  const getPageNumbers = (current, total) => {
+    if (total <= 3) return Array.from({ length: total }, (_, i) => i + 1);
 
-  if (pageCount <= 3) {
-    for (let i = 1; i <= pageCount; i++) pages.push(i);
-  } else {
-    if (currentPage <= 3) {
-      pages.push(1, 2, 3, "...", pageCount);
-    } else if (currentPage >= pageCount - 2) {
-      pages.push(1, "...", pageCount - 2, pageCount - 1, pageCount);
-    } else {
-      pages.push(
-        1,
-        "...",
-        currentPage - 1,
-        currentPage,
-        currentPage + 1,
-        "...",
-        pageCount
-      );
-    }
-  }
+    if (current <= 3) return [1, 2, 3, "...", total];
+    if (current >= total - 2) return [1, "...", total - 2, total - 1, total];
+
+    return [1, "...", current - 1, current, current + 1, "...", total];
+  };
+
+  // Generate pages
+  const pages = getPageNumbers(currentPage, pageCount);
 
   pages.forEach((p) => {
-    if (p === "...") {
-      pagination.appendChild(addEllipsis());
-    } else {
-      pagination.appendChild(createButton(p, p, p === currentPage));
-    }
+    pagination.appendChild(
+      p === "..." ? addEllipsis() : createButton(p, p, p === currentPage)
+    );
   });
 
+  // Next button
   const nextBtn = createButton(
     "Next",
     currentPage + 1,

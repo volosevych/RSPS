@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const togglePassword = document.getElementById("togglePassword");
   const forgotForm = document.getElementById("forgotForm");
   const resetForm = document.getElementById("resetForm");
-  const newPasswordInput = document.getElementById("newPassword");
-  const confirmPasswordInput = document.getElementById("confirmPassword");
 
   // Show/hide password (only if elements exist)
   if (passwordInput && togglePassword) {
@@ -44,6 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Reset Password
   if (resetForm) {
+    const newPasswordInput = document.getElementById("newPassword");
+    const confirmPasswordInput = document.getElementById("confirmPassword");
+
     resetForm.addEventListener("submit", function (e) {
       e.preventDefault();
 

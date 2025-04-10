@@ -24,18 +24,19 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
-    <!-- Loading Animation -->
+    <!-- Page Loading Spinner -->
     <div id="page-loader">
       <div class="spinner"></div>
     </div>
-    <!-- ------------------ header start ------------------ -->
+
+    <!-- ================= Header Section ================= -->
     <header>
       <div class="container">
         <!-- For Desktop Screens -->
         <div
           class="d-lg-flex d-none justify-content-between align-items-center h-72px"
         >
-          <!-- logo and nav links -->
+          <!-- Logo & Navigation -->
           <div class="d-flex align-items-center gap-10">
             <img
               src="../assets/icons/logo.png"
@@ -44,14 +45,14 @@
               alt="RSPS Logo"
               class="cursor-pointer"
             />
-            <ul class="d-flex ul-inherit">
+            <ul class="d-flex ul-inherit align-items-center">
               <li class="links"><a href="../index.html">RSPS List</a></li>
               <li class="links"><a href="./blog.html">Blogs</a></li>
               <li class="links"><a href="./contact.html">Contact</a></li>
             </ul>
           </div>
 
-          <!-- log in and sign up buttons -->
+          <!-- Auth Buttons -->
           <div class="d-flex gap-3 align-items-center">
             <button class="white-button">
               <a href="./logIn.html">Log In</a>
@@ -62,11 +63,10 @@
           </div>
         </div>
 
-        <!-- For smaller screens -->
+        <!-- Mobile Header -->
         <div
           class="d-flex d-lg-none justify-content-between align-items-center h-72px"
         >
-          <!-- Hamburger / X Toggle -->
           <button
             id="mobileToggle"
             class="hamburger d-flex flex-column justify-content-center"
@@ -76,7 +76,6 @@
             <span></span>
           </button>
 
-          <!-- Logo -->
           <div>
             <img
               src="../assets/icons/logo.png"
@@ -87,7 +86,7 @@
           </div>
         </div>
 
-        <!-- Sliding Menu -->
+        <!-- Mobile Menu Slide-In -->
         <div
           id="mobileMenu"
           class="mobile-menu shadow d-flex align-items-start flex-column"
@@ -108,10 +107,10 @@
         </div>
       </div>
     </header>
-    <!-- ------------------ header end ------------------ -->
 
+    <!-- ================= Main Content ================= -->
     <main>
-      <!-- Hero -->
+      <!-- Blog Hero Section -->
       <section>
         <div class="bg-hero d-flex justify-content-center align-items-center">
           <div class="container">
@@ -125,12 +124,10 @@
         </div>
       </section>
 
-      <!-- Blogs -->
+      <!-- Blog Listing Section -->
       <section class="pt-5 rounded rounded-section">
         <div class="container">
-          <!-- Blog content is inside blogs.js file, 
-                located at assets/js/blogs.js
-            -->
+          <!-- Blog items will be dynamically added from blogs.js -->
           <div
             id="blogPostsContainer"
             class="d-flex flex-column gap-4 justify-content-center align-items-center"
@@ -139,7 +136,7 @@
       </section>
     </main>
 
-    <!-- ------------------ footer start ------------------ -->
+    <!-- ================= Footer ================= -->
     <footer>
       <div
         class="bg-footer position-relative d-flex align-items-center justify-content-center py-4"
@@ -149,7 +146,7 @@
           <div class="row">
             <div class="col-12">
               <div class="d-flex gap-10 flex-lg-row flex-column">
-                <!-- Logo block -->
+                <!-- Footer Logo -->
                 <div
                   class="footer-top d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start mb-4 p-right"
                 >
@@ -164,13 +161,12 @@
                   <p class="mb-0 mt-4">Copyright ©RSPSLIST</p>
                 </div>
 
-                <!-- Footer content blocks -->
+                <!-- Footer Columns -->
                 <div
                   class="footer-columns margin-auto d-flex flex-column flex-md-row gap-15 align-items-center align-items-lg-start text-center text-md-start"
                 >
-                  <!-- Links -->
+                  <!-- Navigation Links -->
                   <div class="d-flex flex-column gap-3 pe-md-3">
-                    <!-- links here -->
                     <h4 class="color-primaryBlue fw-medium">Links</h4>
 
                     <ul class="ul-inherit d-flex flex-column gap-1">
@@ -191,11 +187,10 @@
                     </ul>
                   </div>
 
-                  <!-- Recent posts -->
+                  <!-- Recent Posts -->
                   <div
                     class="d-flex flex-column align-items-lg-start align-items-center gap-4"
                   >
-                    <!-- posts here -->
                     <h4 class="color-primaryBlue fw-medium">Recent posts</h4>
 
                     <div class="d-flex flex-column gap-3">
@@ -228,11 +223,10 @@
                     </div>
                   </div>
 
-                  <!-- Popular posts -->
+                  <!-- Popular Posts -->
                   <div
                     class="d-flex flex-column gap-4 align-items-lg-start align-items-center"
                   >
-                    <!-- posts here -->
                     <h4 class="color-primaryBlue fw-medium">Popular posts</h4>
 
                     <div class="d-flex flex-column gap-3">
@@ -271,7 +265,7 @@
         </div>
       </div>
 
-      <!-- Footer Bottom -->
+      <!-- Footer Bottom Bar -->
       <div
         class="bg-footerBottom d-flex justify-content-center align-items-center"
       >
@@ -281,9 +275,9 @@
         </p>
       </div>
     </footer>
-    <!-- Main Script -->
+
+    <!-- ================= Scripts ================= -->
     <script src="../assets/js/main.js"></script>
-    <!-- Blogs -->
     <script src="../assets/js/blogs.js"></script>
   </body>
 </html>

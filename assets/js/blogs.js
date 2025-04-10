@@ -1,7 +1,11 @@
+// ==============================
+// BLOG POST DATA
+// ==============================
 const blogPosts = [
   {
     slug: "fantasy-realm",
     tag: "BLOG",
+    // Main title shown on both blog card and blog post
     title: "RSPSList Blog Post 1",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
@@ -10,32 +14,27 @@ const blogPosts = [
     date: "24 September | Blog",
     icon: "../assets/icons/R.png",
 
-    // You can change blog content in here
+    // Full blog content to be rendered dynamically
     BlogContent: [
       {
-        // First box with title and paragraphs
         type: "section",
         heading: {
-          level: 1,
+          level: 2, // Corresponds to <h1>, <h2>, etc.
           // title
           text: "OSRS Fire Giants: Strategy, Tips & Drops - RSPS List",
-          id: "1",
+          id: "1", // Used for anchor links
         },
-        // Paragraph
         paragraphs: [
           "Fire Giants are one of the strongest categories of giants in OSRS. They have 86, 104, and 109 combat levels, making them more challenging than Ice, Moss, and Hill Giants. Players often choose Fire Giants OSRS for training Ranged and Slayer skills because of their high fire giant drop rate and useful drops, like the <b>Rune Scimitar</b>.",
         ],
       },
       {
-        // Second box with title and paragraphs
         type: "section",
         heading: {
           level: 2,
-          // title
           text: "What are the OSRS Fire Giants?",
           id: "2",
         },
-        // Paragraphs
         paragraphs: [
           "Fire Giants are one of the strongest categories of giants in OSRS. They have 86, 104, and 109 combat levels, making them more challenging than Ice, Moss, and Hill Giants. Players often choose Fire Giants OSRS for training Ranged and Slayer skills because of their high fire giant drop rate and useful drops, like the <b>Rune Scimitar</b>.",
 
@@ -45,40 +44,32 @@ const blogPosts = [
         ],
       },
       {
-        // Third box with paragraph, list, and followup
         type: "section",
         heading: {
           level: 3,
-          // Title
           text: "Requirements",
           id: "3",
         },
-        // Paragraph
         paragraphs: [
           "Before killing fire giants in OSRS, you must be prepared for stats and equipment. While it's possible to fight them at lower levels, it's recommended to have at least the following stats for an easier time:",
         ],
-        // List
         list: [
           "Combat Level: 85+",
           "Attack/Strength/Defense: 70+",
           "Ranged: 70+",
           "Slayer Level: 40 (if fighting them as a Slayer task)",
         ],
-        // Followup
         followup: [
           "Although these levels are not mandatory, they make the fight more manageable and efficient. <b>Lower-level players</b> should take extra caution with healing supplies and Prayer Protection, while <b>higher-level players</b> can focus on maximizing experience rates and drop chances.",
         ],
       },
       {
-        // Forth box with title and paragraph
         type: "section",
         heading: {
           level: 4,
-          // Title
           text: "Where To Find Fire Giants In OSRS",
           id: "4",
         },
-        // Paragraph
         paragraphs: [
           "The fire giant location options in OSRS are varied, providing several areas for players to encounter them:",
         ],
@@ -95,32 +86,25 @@ const blogPosts = [
     author: "RS-Servers Team",
     date: "24 September | Blog",
     icon: "../assets/icons/R.png",
-    // You can change blog content in here
     BlogContent: [
       {
-        // First box with title and paragraphs
         type: "section",
         heading: {
           level: 1,
-          // title
           text: "OSRS Fire Giants: Strategy, Tips & Drops - RSPS List",
           id: "1",
         },
-        // Paragraph
         paragraphs: [
           "Fire Giants are one of the strongest categories of giants in OSRS. They have 86, 104, and 109 combat levels, making them more challenging than Ice, Moss, and Hill Giants. Players often choose Fire Giants OSRS for training Ranged and Slayer skills because of their high fire giant drop rate and useful drops, like the <b>Rune Scimitar</b>.",
         ],
       },
       {
-        // Second box with title and paragraphs
         type: "section",
         heading: {
           level: 2,
-          // title
           text: "What are the OSRS Fire Giants?",
           id: "2",
         },
-        // Paragraphs
         paragraphs: [
           "Fire Giants are one of the strongest categories of giants in OSRS. They have 86, 104, and 109 combat levels, making them more challenging than Ice, Moss, and Hill Giants. Players often choose Fire Giants OSRS for training Ranged and Slayer skills because of their high fire giant drop rate and useful drops, like the <b>Rune Scimitar</b>.",
 
@@ -130,40 +114,32 @@ const blogPosts = [
         ],
       },
       {
-        // Third box with paragraph, list, and followup
         type: "section",
         heading: {
           level: 3,
-          // Title
           text: "Requirements",
           id: "3",
         },
-        // Paragraph
         paragraphs: [
           "Before killing fire giants in OSRS, you must be prepared for stats and equipment. While it's possible to fight them at lower levels, it's recommended to have at least the following stats for an easier time:",
         ],
-        // List
         list: [
           "Combat Level: 85+",
           "Attack/Strength/Defense: 70+",
           "Ranged: 70+",
           "Slayer Level: 40 (if fighting them as a Slayer task)",
         ],
-        // Followup
         followup: [
           "Although these levels are not mandatory, they make the fight more manageable and efficient. <b>Lower-level players</b> should take extra caution with healing supplies and Prayer Protection, while <b>higher-level players</b> can focus on maximizing experience rates and drop chances.",
         ],
       },
       {
-        // Forth box with title and paragraph
         type: "section",
         heading: {
           level: 4,
-          // Title
           text: "Where To Find Fire Giants In OSRS",
           id: "4",
         },
-        // Paragraph
         paragraphs: [
           "The fire giant location options in OSRS are varied, providing several areas for players to encounter them:",
         ],
@@ -181,32 +157,25 @@ const blogPosts = [
     date: "24 September | Blog",
     icon: "../assets/icons/R.png",
 
-    // You can change blog content in here
     BlogContent: [
       {
-        // First box with title and paragraphs
         type: "section",
         heading: {
           level: 1,
-          // title
           text: "OSRS Fire Giants: Strategy, Tips & Drops - RSPS List",
           id: "1",
         },
-        // Paragraph
         paragraphs: [
           "Fire Giants are one of the strongest categories of giants in OSRS. They have 86, 104, and 109 combat levels, making them more challenging than Ice, Moss, and Hill Giants. Players often choose Fire Giants OSRS for training Ranged and Slayer skills because of their high fire giant drop rate and useful drops, like the <b>Rune Scimitar</b>.",
         ],
       },
       {
-        // Second box with title and paragraphs
         type: "section",
         heading: {
           level: 2,
-          // title
           text: "What are the OSRS Fire Giants?",
           id: "2",
         },
-        // Paragraphs
         paragraphs: [
           "Fire Giants are one of the strongest categories of giants in OSRS. They have 86, 104, and 109 combat levels, making them more challenging than Ice, Moss, and Hill Giants. Players often choose Fire Giants OSRS for training Ranged and Slayer skills because of their high fire giant drop rate and useful drops, like the <b>Rune Scimitar</b>.",
 
@@ -216,40 +185,32 @@ const blogPosts = [
         ],
       },
       {
-        // Third box with paragraph, list, and followup
         type: "section",
         heading: {
           level: 3,
-          // Title
           text: "Requirements",
           id: "3",
         },
-        // Paragraph
         paragraphs: [
           "Before killing fire giants in OSRS, you must be prepared for stats and equipment. While it's possible to fight them at lower levels, it's recommended to have at least the following stats for an easier time:",
         ],
-        // List
         list: [
           "Combat Level: 85+",
           "Attack/Strength/Defense: 70+",
           "Ranged: 70+",
           "Slayer Level: 40 (if fighting them as a Slayer task)",
         ],
-        // Followup
         followup: [
           "Although these levels are not mandatory, they make the fight more manageable and efficient. <b>Lower-level players</b> should take extra caution with healing supplies and Prayer Protection, while <b>higher-level players</b> can focus on maximizing experience rates and drop chances.",
         ],
       },
       {
-        // Forth box with title and paragraph
         type: "section",
         heading: {
           level: 4,
-          // Title
           text: "Where To Find Fire Giants In OSRS",
           id: "4",
         },
-        // Paragraph
         paragraphs: [
           "The fire giant location options in OSRS are varied, providing several areas for players to encounter them:",
         ],
@@ -258,6 +219,9 @@ const blogPosts = [
   },
 ];
 
+// ==============================
+// Renders full blog post content from BlogContent array
+// ==============================
 function renderBlogContent(contentArray) {
   const container = document.getElementById("blogContent");
   if (!container) return;
@@ -267,7 +231,7 @@ function renderBlogContent(contentArray) {
   contentArray.forEach((section) => {
     let html = "";
 
-    // Render heading
+    // Heading (h1, h2, h3, etc.)
     if (section.heading) {
       html += `<h${section.heading.level} id="section-${section.heading.id}" class="color-blue fs-32 fw-medium">${section.heading.text}</h${section.heading.level}>`;
     }
@@ -279,16 +243,16 @@ function renderBlogContent(contentArray) {
       });
     }
 
-    // Render list
+    // Unordered list (if present)
     if (section.list) {
-      html += `<ul class="d-flex flex-column gap-3 pt-3">`;
+      html += `<ul role="list" class="d-flex flex-column gap-3 pt-3">`;
       section.list.forEach((item) => {
         html += `<li>${item}</li>`;
       });
       html += `</ul>`;
     }
 
-    // Render follow-up paragraphs
+    // Follow-up paragraphs (optional extra)
     if (section.followup) {
       section.followup.forEach((p) => {
         html += `<p class="pt-3">${p}</p>`;
@@ -301,6 +265,9 @@ function renderBlogContent(contentArray) {
   });
 }
 
+// ==============================
+// Renders quick navigation links based on headings
+// ==============================
 function renderQuickLinks(content) {
   const quickLinksBox = document.getElementById("quickLinksBox");
   if (!quickLinksBox) return;
@@ -315,6 +282,9 @@ function renderQuickLinks(content) {
     .join("");
 }
 
+// ==============================
+// Builds blog card HTML for blog list page
+// ==============================
 function createBlogPostHTML(post) {
   return `
   <a href="blog-post.html?slug=${post.slug}" class="blog-link">
@@ -346,9 +316,11 @@ function createBlogPostHTML(post) {
 document.addEventListener("DOMContentLoaded", () => {
   const blogContainer = document.getElementById("blogPostsContainer");
   if (blogContainer) {
+    let html = "";
     blogPosts.forEach((post) => {
-      blogContainer.innerHTML += createBlogPostHTML(post);
+      html += createBlogPostHTML(post);
     });
+    blogContainer.innerHTML = html;
   }
 
   const params = new URLSearchParams(window.location.search);
@@ -356,16 +328,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (window.location.pathname.includes("blog-post.html") && slug) {
     const post = blogPosts.find((p) => p.slug === slug);
-    console.log("Post found:", post);
 
     if (post) {
       const titleEl = document.getElementById("blogTitle");
       if (titleEl) titleEl.textContent = post.title;
 
-      if (post.BlogContent) {
-        renderBlogContent(post.BlogContent);
-        renderQuickLinks(post.BlogContent);
-      }
+      if (!post?.BlogContent) return;
+      renderBlogContent(post.BlogContent);
+      renderQuickLinks(post.BlogContent);
     }
   }
 });

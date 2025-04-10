@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   if (loader) {
     loader.classList.add("fade-out");
     setTimeout(() => {
-      loader.remove();
+      loader.classList.add("hidden");
     }, 300);
   }
 });
@@ -12,10 +12,12 @@ window.addEventListener("load", () => {
 const toggleBtn = document.getElementById("mobileToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
-toggleBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("active");
-  toggleBtn.classList.toggle("open");
-});
+if (toggleBtn && mobileMenu) {
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    toggleBtn.classList.toggle("open");
+  });
+}
 
 // Active link for header nav links
 const links = document.querySelectorAll("header a");
