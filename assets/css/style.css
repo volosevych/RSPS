@@ -16,9 +16,9 @@
   /* Font */
   --font-base: clamp(12px, 5vw, 16px);
   --font-h2: clamp(28px, 5vw, 36px);
-  --font-hero: clamp(42px, 5vw, 60px);
-  --font-extralarge: clamp(42px, 5vw, 130px);
-  --font-large: clamp(32px, 5vw, 72px);
+  --font-hero: clamp(32px, 5vw, 60px);
+  --font-extralarge: clamp(32px, 5vw, 130px);
+  --font-large: clamp(28px, 5vw, 72px);
 
   /* Font Family */
   --font-leagueSpartan: "League Spartan", sans-serif;
@@ -133,6 +133,10 @@ p {
   font-size: var(--font-hero);
 }
 
+.custom-padding {
+  padding: 70px 50px;
+}
+
 .font-extralarge {
   font-size: var(--font-extralarge);
 }
@@ -218,6 +222,15 @@ p {
 
 .color-gray {
   color: var(--gray);
+}
+
+.hover {
+  color: var(--black);
+  transition: color 0.3s ease-in;
+}
+
+.hover:hover {
+  color: var(--blue);
 }
 
 .bg-gradient {
@@ -313,8 +326,9 @@ p {
 }
 
 .white-button:hover {
-  background-color: var(--primary-blue);
+  background-color: var(--darker-blue);
   color: var(--white);
+  border: 1px solid var(--darker-blue);
 }
 
 .hamburger {
@@ -439,6 +453,27 @@ p {
   padding: 15px 50px;
 }
 
+/* Fade in animation for lists */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.row.animate-in {
+  animation: fadeSlideIn 0.4s ease-out both;
+}
+
+.alert-info {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
 .blue-tag {
   background-color: var(--primary-blue);
   color: var(--white);
@@ -446,6 +481,7 @@ p {
   border-radius: 15px;
 }
 
+/* Pagination number page */
 .page-link {
   font-size: 24px;
   font-weight: bold;
@@ -467,6 +503,12 @@ p {
 .page-number.disabled.page-next .page-link {
   background-color: transparent;
   color: var(--light-blue);
+}
+
+/* Dots for pagination */
+.page-link.disabled {
+  background-color: transparent;
+  color: var(--black);
 }
 
 .bg-footerBottom {
@@ -630,5 +672,19 @@ textarea::placeholder {
     inset: 0;
     background: rgba(255, 255, 255, 0.2);
     z-index: 0;
+  }
+
+  .custom-padding {
+    padding: 47px 26px;
+  }
+}
+
+@media (max-width: 320px) {
+  .custom-padding {
+    padding: 40px 6px;
+  }
+
+  .list-container .row {
+    padding: 15px 5px;
   }
 }

@@ -2,6 +2,7 @@
 // Here you can change all the text content
 const allItems = [
   {
+    // Category for filter
     category: "Custom",
     title: "Fantasy - #1 Custom ",
     description:
@@ -21,7 +22,6 @@ const allItems = [
     tags: ["PvM", "Bosses", "Events"],
     image: "assets/background-images/banner.jpg",
   },
-  // Add more items as needed...
   {
     category: "Custom",
     title: "Azerite317 ",
@@ -78,6 +78,186 @@ const allItems = [
     description:
       "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
     number: 8,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
+    votes: 3890,
+    tags: ["PvM", "Custom", "Quests"],
+    image: "assets/background-images/banner.jpg",
+  },
+  {
+    category: "Custom",
+    title: "Oldschool RSPS",
+    description:
+      "Fantasy is a Custom RSPS with over 400 players online active daily. There’s a new update on Fantasy every weekend, and a lot of our...",
+    number: 9,
     votes: 3890,
     tags: ["PvM", "Custom", "Quests"],
     image: "assets/background-images/banner.jpg",
@@ -159,13 +339,11 @@ document.addEventListener("DOMContentLoaded", function () {
 function renderItems() {
   if (!container) return;
 
-  // Filter items
   const filtered =
     currentFilter === "All"
       ? allItems
       : allItems.filter((item) => item.category === currentFilter);
 
-  // Calculate pagination
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
   const currentItems = filtered.slice(start, end);
@@ -173,18 +351,23 @@ function renderItems() {
   // Clear container
   container.innerHTML = "";
 
-  // Show message if no items
   if (currentItems.length === 0) {
     container.innerHTML = `<div class="alert alert-info">No servers found matching your criteria.</div>`;
     return;
   }
 
-  // Render items
-  currentItems.forEach((item) => {
-    container.innerHTML += createBoxHTML(item);
+  // Render new rows with animation
+  currentItems.forEach((item, index) => {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = createBoxHTML(item);
+    const row = wrapper.querySelector(".row");
+
+    row.classList.add("animate-in");
+    row.style.animationDelay = `${index * 50}ms`;
+
+    container.appendChild(row);
   });
 
-  // Update pagination
   renderPagination(filtered.length);
 }
 
@@ -257,7 +440,14 @@ function renderPagination(totalItems) {
       disabled ? "disabled" : ""
     }>${label}</button>`;
 
-    if (!disabled && page != currentPage) {
+    // if (!disabled && page != currentPage) {
+    //   li.addEventListener("click", () => {
+    //     currentPage = page;
+    //     renderItems();
+    //   });
+    // }
+
+    if (!disabled && page !== currentPage && typeof page === "number") {
       li.addEventListener("click", () => {
         currentPage = page;
         renderItems();
@@ -275,19 +465,24 @@ function renderPagination(totalItems) {
 
   const pages = [];
 
-  if (pageCount <= 5) {
+  if (pageCount <= 3) {
     for (let i = 1; i <= pageCount; i++) pages.push(i);
   } else {
-    pages.push(1);
-
-    if (currentPage > 3) pages.push("...");
-
-    const start = Math.max(2, currentPage - 1);
-    const end = Math.min(pageCount - 1, currentPage + 1);
-
-    for (let i = start; i <= end; i++) pages.push(i);
-
-    pages.push(pageCount);
+    if (currentPage <= 3) {
+      pages.push(1, 2, 3, "...", pageCount);
+    } else if (currentPage >= pageCount - 2) {
+      pages.push(1, "...", pageCount - 2, pageCount - 1, pageCount);
+    } else {
+      pages.push(
+        1,
+        "...",
+        currentPage - 1,
+        currentPage,
+        currentPage + 1,
+        "...",
+        pageCount
+      );
+    }
   }
 
   pages.forEach((p) => {

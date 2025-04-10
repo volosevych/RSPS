@@ -5,7 +5,7 @@ const blogPosts = [
     title: "RSPSList Blog Post 1",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
-    image: "../assets/cards/home-1.jpg",
+    image: "../assets/cards/blog-1.png",
     author: "RS-Servers Team",
     date: "24 September | Blog",
     icon: "../assets/icons/R.png",
@@ -91,7 +91,7 @@ const blogPosts = [
     title: "RSPSList Blog Post 2",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
-    image: "../assets/cards/home-3.jpg",
+    image: "../assets/cards/blog-3.png",
     author: "RS-Servers Team",
     date: "24 September | Blog",
     icon: "../assets/icons/R.png",
@@ -176,7 +176,7 @@ const blogPosts = [
     title: "RSPSList Blog Post 3",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
-    image: "../assets/cards/home-2.jpg",
+    image: "../assets/cards/blog-3.png",
     author: "RS-Servers Team",
     date: "24 September | Blog",
     icon: "../assets/icons/R.png",
