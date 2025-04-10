@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.pathname === "/" ||
     window.location.pathname === "/index.html";
 
-  const prefix = isHomePage ? "./pages/" : "./";
+  const prefix = window.location.pathname.includes("/pages/") ? "" : "pages/";
 
   // Function to render auth buttons
   const renderAuthButtons = (container, isMobile = false) => {
