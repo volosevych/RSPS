@@ -1,3 +1,14 @@
+// page loader
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  if (loader) {
+    loader.classList.add("fade-out");
+    setTimeout(() => {
+      loader.remove();
+    }, 300);
+  }
+});
+
 const toggleBtn = document.getElementById("mobileToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
