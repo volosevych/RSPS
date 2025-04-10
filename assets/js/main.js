@@ -37,8 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const isHomePage =
     window.location.pathname.endsWith("index.html") ||
-    window.location.pathname === "/";
-  const prefix = isHomePage ? "pages/" : "./";
+    window.location.pathname === "/" ||
+    window.location.pathname === "/index.html";
+
+  const prefix = isHomePage ? "./pages/" : "./";
 
   // Function to render auth buttons
   const renderAuthButtons = (container, isMobile = false) => {
